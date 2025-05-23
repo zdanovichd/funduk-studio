@@ -1,0 +1,54 @@
+:root {
+    --color-primary: #343332;
+    --color-secondary: #472D2C;
+    --color-text: #34333280;
+    --color-accent: #579E6E;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+nextjs-portal {
+    /* display: none; */
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.services__slider.swiper {
+    border-radius: 20px 0 0 20px;
+}
+
+
+.services__slider .swiper-slide {
+    width: 367px;
+}
+
+.partners__slider.swiper {
+    display: flex;
+    width: auto;
+    will-change: transform;
+    transition: none !important;
+}
+
+.partners__slider .swiper-slide  {
+    flex-shrink: 0;
+    width: auto !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
+}
