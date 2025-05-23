@@ -15,7 +15,6 @@ export default function BannerFeedback({ bg_url = "/bg.webp", title = [], descri
                     alt="Фон"
                     className={styles.bgImage}
                     fill
-                    priority
                 />
                 <div className={styles.overlay}></div>
                 <div className={styles.banner__content}>

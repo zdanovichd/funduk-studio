@@ -106,7 +106,6 @@ export default function Partners() {
                                             width={160}
                                             height={80}
                                             className={styles.partner__logo}
-                                            priority
                                         />
                                     </div>
                                 </Link>

@@ -80,7 +80,6 @@ export default function ServicesSlider({
                                     alt="Фон"
                                     className={styles.bgImage}
                                     fill
-                                    priority
                                 />
                                 <div className={styles.overlay}></div>
                                 <div className={styles.slide__content}>
