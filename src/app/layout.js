@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { exo2, exo2Italic, montserrat, montserratItalic } from './fonts'
 import "./globals.css";
 import Header from "./components/layout/Header/Header";
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <Header/>
         {children}
         <Footer/>
+        <SpeedInsights/>
       </body>
     </html>
   );

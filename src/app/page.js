@@ -52,7 +52,14 @@ export default function Home() {
       />
       <MultistepForm/>
 
-      <PortfolioSection/>
+      <PortfolioSection
+        title={"Посмотрите наши последние работы"}
+        slides={[
+          { title: "Дизайн-проект квартиры 105,3 м²", subtitle: "от 3 500 р/м² за работу", image: "/SE01-1.webp", link: "/evroremont" },
+          { title: "Ремонт двухкомнатной квартиры Академгородок", subtitle: "от 3 500 р/м² за работу", image: "/SE02-1.webp", link: "/remont-kvartir/odnokomnatnaya" },
+          { title: "Дизайн-проект трехкомнатной квартиры", subtitle: "от 3 500 р/м² за работу", image: "/SE01-1.webp", link: "/remont-kvartir/dvuhkomnatnaya" },
+        ]}
+      />
       <TextWAccordion/>
       <WhyUsSection/>
 

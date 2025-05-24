@@ -46,12 +46,14 @@ export default function ServicesSlider({
                         <button
                             onClick={() => swiperRef.current.slidePrev()}
                             className={styles.services__button}
+                            title="Назад"
                         >
                             <FontAwesomeIcon icon={faArrowLeft} size="lg" />
                         </button>
                         <button
                             onClick={() => swiperRef.current.slideNext()}
                             className={styles.services__button}
+                            title="Вперед"
                         >
                             <FontAwesomeIcon icon={faArrowRight} size="lg" />
                         </button>
@@ -145,12 +147,14 @@ export default function ServicesSlider({
                         <button
                             onClick={() => swiperRef.current.slidePrev()}
                             className={styles.services__button}
+                            title="Назад"
                         >
                             <FontAwesomeIcon icon={faArrowLeft} size="lg" />
                         </button>
                         <button
                             onClick={() => swiperRef.current.slideNext()}
                             className={styles.services__button}
+                            title="Вперед"
                         >
                             <FontAwesomeIcon icon={faArrowRight} size="lg" />
                         </button>
