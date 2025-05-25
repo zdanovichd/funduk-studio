@@ -197,6 +197,7 @@ export default function MultistepForm() {
                             className={styles.bgImage}
                             width={800}  // оригинальная ширина
                             height={960} // оригинальная высота
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px"
                             // style={{
                             //     position: 'absolute',
                             //     width: '35%', // 35% от родителя
