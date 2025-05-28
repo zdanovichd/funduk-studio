@@ -1,0 +1,275 @@
+/* Базовые стили */
+.footer {
+    width: 100%;
+    background: #343332;
+    padding: 96px 0 0;
+    position: relative;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-bottom: 96px;
+    border-bottom: 1px solid rgba(222, 222, 222, 0.10);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Стили для лого и кнопки */
+.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 20%;
+}
+
+.logoImage {
+    width: 174px;
+    height: 45px;
+}
+
+.callbackButton {
+    width: 177px;
+    height: 50px;
+    background: #343332;
+    border-radius: 500px;
+    outline: 1px solid white;
+    outline-offset: -1px;
+    color: white;
+    font-size: 16px;
+    font-family: var(--font-exo2), sans-serif;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.callbackButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Стили для навигации */
+.nav,
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 22%;
+}
+
+.navTitle,
+.servicesTitle,
+.contactsTitle {
+    color: white;
+    font-size: 18px;
+    font-family: var(--font-exo2), sans-serif;
+    font-weight: 600;
+    line-height: 18px;
+    margin: 0 0 10px;
+}
+
+.navList,
+.servicesList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.navItem,
+.servicesItem {
+    height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.navLink,
+.servicesLink {
+    color: #999998;
+    font-size: 13px;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 500;
+    line-height: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover,
+.servicesLink:hover {
+    color: white;
+}
+
+/* Стили для контактов */
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 342px;
+}
+
+.contactsDescription {
+    color: white;
+    font-size: 13px;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 500;
+    line-height: 16.9px;
+    margin: 0;
+}
+
+.contactItem {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contactLabel {
+    color: white;
+    font-size: 18px;
+    font-family: var(--font-exo2), sans-serif;
+    font-weight: 600;
+    line-height: 25px;
+    margin: 0;
+}
+
+.contactText {
+    color: white;
+    font-size: 13px;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 500;
+    line-height: 19.5px;
+    margin: 0;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+/* Стили для социальных иконок */
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.socialTitle {
+    color: white;
+    font-size: 16px;
+    font-family: var(--font-exo2), sans-serif;
+    font-weight: 600;
+    line-height: 25px;
+    margin: 0;
+}
+
+.socialSubtitle {
+    color: #999998;
+    font-size: 13px;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 400;
+    line-height: 19.5px;
+    margin: 0;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 15px;
+}
+
+.socialIcon {
+    width: 38px;
+    height: 38px;
+    background: #EBEBEB;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6A6262;
+    font-size: 19px;
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+    line-height: 19px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+    background: #d1d1d1;
+}
+
+/* Стили для копирайта */
+.copyright {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 400;
+    line-height: 14px;
+    padding: 30px 0;
+}
+
+
+
+@media (max-width:1024px) {
+
+    .footer {
+        padding: 6% 0% 6% 3%;
+    }
+
+    .container {
+        max-width: 1024px;
+    }
+
+}
+
+@media (max-width:767px) {
+
+    .footer {
+        padding: 7% 5% 7% 5%;
+    }
+
+    .container {
+        max-width: 767px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .services {
+        display: none;
+    }
+
+    .contacts {
+        align-items: center;
+        max-width: 90%;
+        width: 100%;
+    }
+
+    .contactItem {
+        align-items: center;
+    }
+
+    .social {
+        align-items: center;
+    }
+
+    .contactsDescription,
+    .contactLabel {
+        text-align: center;
+    }
+}

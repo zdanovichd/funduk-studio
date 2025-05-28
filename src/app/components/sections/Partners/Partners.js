@@ -98,7 +98,7 @@ export default function Partners() {
                     >
                         {[...partners, ...partners].map((partner, index) => (
                             <SwiperSlide key={`${partner.id}-${index}`} className={styles.slide}>
-                                <Link href={partner.url} className={styles.partnerLink}>
+                                <Link href={partner.url} className={styles.partnerLink} rel="nofollow">
                                     <div className={styles.logoContainer}>
                                         <Image
                                             src={partner.src}

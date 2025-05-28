@@ -1,4 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+      remotePatterns: [
+        {
+          hostname: 'swiperjs.com',
+        },
+      ],
+    },
+  };
 
-export default nextConfig;
+  export default nextConfig;
+
+//   https://placehold.co/600x400/

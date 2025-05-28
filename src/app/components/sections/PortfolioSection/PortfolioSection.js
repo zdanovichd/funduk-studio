@@ -23,7 +23,6 @@ export default function PortfolioSection({
     const stickyRef = useRef(null);
     const sectionRef = useRef(null);
 
-    console.log(headerHeight);
     let leftPadding = 0;
     if (innerWidth > 1024) {
         leftPadding = (innerWidth - 1140) / 2;
@@ -31,7 +30,6 @@ export default function PortfolioSection({
 
     useEffect(() => {
         const handleScroll = () => {
-            console.log("handleScroll");
             if (stickyRef.current && sectionRef.current) {
                 const stickyTop = stickyRef.current.getBoundingClientRect().top;
                 const sectionTop = sectionRef.current.getBoundingClientRect().top;
@@ -104,9 +102,24 @@ export default function PortfolioSection({
                                                 {content.title}
                                             </h3>
                                         </Link>
-                                        <p className={styles.slide__subtitle}>
-                                            {content.subtitle}
-                                        </p>
+                                        <div className={styles.slide__data}>
+                                            <p className={styles.slide__subtitle}>
+                                                <span className={styles.slide__subtitle__dot}></span>
+                                                {content.characteristics.type}
+                                            </p>
+                                            <p className={styles.slide__subtitle}>
+                                                <span className={styles.slide__subtitle__dot}></span>
+                                                {content.characteristics.rooms}
+                                            </p>
+                                            <p className={styles.slide__subtitle}>
+                                                <span className={styles.slide__subtitle__dot}></span>
+                                                {content.characteristics.area}
+                                            </p>
+                                            <p className={styles.slide__subtitle}>
+                                                <span className={styles.slide__subtitle__dot}></span>
+                                                {content.characteristics.price}
+                                            </p>
+                                        </div>
                                     </div>
                                     {/* <div
                                         className={styles.slide__content_inner}

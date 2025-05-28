@@ -1,10 +1,14 @@
+.priceTable {
+    padding: 3% 0;
+}
 
 .priceTable__wrapper {
     display: flex;
     flex-direction: column;
     max-width: 1140px;
-    margin: 5% auto;
     gap: 40px;
+    display: flex;
+    margin: 0 auto;
     /* padding: 5% 3% 3% 3%; */
 }
 

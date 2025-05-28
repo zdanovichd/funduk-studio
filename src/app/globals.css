@@ -46,9 +46,120 @@ nextjs-portal {
     height: 400px;
 }
 
+.howwework__slider.swiper {
+    margin: 0;
+    width: 100%;
+    border-radius: 20px 0 0 20px;
+}
+
+
+.howwework__slider .swiper-slide {
+    /* width: 367px; */
+    width: 439px;
+    height: 350px;
+}
+
+
+
+.independentreviews__slider.swiper {
+    margin: 0;
+    width: 100%;
+}
+
+.independentreviews__slider .swiper-slide {
+    width: 419px;
+    /* max-width: 163px; */
+    height: 300px;
+}
+
+
+.postssection__slider.swiper {
+    margin: 0;
+    width: 100%;
+    /* border-radius: 20px 0 0 20px; */
+}
+
+
+.postssection__slider .swiper-slide {
+    /* width: 367px; */
+    width: 450px;
+    height: 380px;
+}
+
+
+.customerreviews__slider.swiper {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    /* border-radius: 20px 0 0 20px; */
+}
+
+.customerreviews__slider .swiper-wrapper {
+    height: 100%;
+    min-height: 400px;
+}
+
+
+.customerreviews__slider .swiper-slide {
+    /* width: 367px; */
+    width: 450px;
+    height: 100%;
+    min-height: 400px;
+}
+
+
+.customerreviews__thumbs.swiper {
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    /* border-radius: 20px 0 0 20px; */
+    position: absolute;
+    bottom: 0
+}
+
+
+.customerreviews__thumbs .swiper-slide {
+    /* width: 367px; */
+    width: 50px;
+    height: 50px;
+}
+
+.customerreviews__thumbs .swiper-slide-thumb-active {
+    border: 2px solid var(--color-accent);
+    filter: grayscale(0%);
+}
+
 @media (max-width:767px) {
     .portfolio__slider .swiper-slide {
         width: 367px;
+    }
+
+    .howwework__slider .swiper-slide {
+        /* width: 367px; */
+        width: 316px;
+        height: 250px;
+    }
+
+    .postssection__slider .swiper-slide {
+        /* width: 367px; */
+        width: 316px;
+        height: 340px;
+    }
+
+    .customerreviews__slider .swiper-slide {
+        /* width: 367px; */
+        width: 100%;
+        /* height: 620px; */
+    }
+
+    .customerreviews__thumbs.swiper {
+        margin: 0;
+        width: 100%;
+        height: 50px;
+        /* border-radius: 20px 0 0 20px; */
+        position: relative;
+        margin-top: 20px;
+        /* bottom: -50px */
     }
 }
 
@@ -70,4 +181,8 @@ input::-webkit-inner-spin-button {
 }
 input[type='number'] {
     -moz-appearance: textfield;
+}
+
+ul, ol {
+    list-style-position: inside;
 }

@@ -10,6 +10,7 @@ import {
     faVk,
 } from "@fortawesome/free-brands-svg-icons";
 import { faCaretDown, fasCaretDown } from "@fortawesome/free-solid-svg-icons";
+import PopupButton from "../../ui/PopupButton/PopupButton";
 
 export default function Header() {
     const [navHidden, setNavHidden] = useState(true);
@@ -200,12 +201,16 @@ useEffect(() => {
 
                         {/* <!-- Кнопка заказа звонка --> */}
                         <div className={styles.header__callback}>
-                            <button
+                            {/* <button
                                 className={`${styles.btn} ${styles.btn__callback}`}
                                 data-modal="callback"
                             >
                                 Заказать звонок
-                            </button>
+                            </button> */}
+                            <PopupButton
+                                title="Заказать звонок"
+                                color="var(--color-primary)"
+                            />
                         </div>
 
                         {/* <!-- Мобильное меню (только для мобильных) --> */}
