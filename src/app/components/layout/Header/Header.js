@@ -302,7 +302,7 @@ useEffect(() => {
                                     onMouseLeave={() => !isMobile && handleMouseLeave('design')}
                                 >
                                     <Link
-                                        href="/studiya-dizayna-intererov"
+                                        href="/uslugi/studiya-dizayna-intererov"
                                         className={styles.sub_menu__link}
                                         onClick={(e) => {
                                           if (isMobile) {
@@ -333,7 +333,7 @@ useEffect(() => {
                                             }
                                         >
                                             <Link
-                                                href="/dizayn-interera"
+                                                href="/uslugi/dizayn-interera"
                                                 className={
                                                     styles.sub_sub_menu__link
                                                 }
@@ -347,7 +347,7 @@ useEffect(() => {
                                             }
                                         >
                                             <Link
-                                                href="/dizayn-proekt-kvartir"
+                                                href="/uslugi/dizayn-proekt-kvartir"
                                                 className={
                                                     styles.sub_sub_menu__link
                                                 }
@@ -364,7 +364,7 @@ useEffect(() => {
                                     onMouseLeave={() => !isMobile && handleMouseLeave('repair')}
                                 >
                                     <Link
-                                        href="/remont-kvartir"
+                                        href="/uslugi/remont-kvartir"
                                         className={styles.sub_menu__link}
                                         onClick={(e) => {
                                           if (isMobile) {
@@ -395,7 +395,7 @@ useEffect(() => {
                                             }
                                         >
                                             <Link
-                                                href="/remont-kvartir/dizaynerskiy"
+                                                href="/uslugi/dizaynerskiy"
                                                 className={
                                                     styles.sub_sub_menu__link
                                                 }
@@ -409,7 +409,7 @@ useEffect(() => {
                                             }
                                         >
                                             <Link
-                                                href="/remont-kvartir/kapitalnyy"
+                                                href="/uslugi/kapitalnyy"
                                                 className={
                                                     styles.sub_sub_menu__link
                                                 }
@@ -423,7 +423,7 @@ useEffect(() => {
                                             }
                                         >
                                             <Link
-                                                href="/remont-kvartir/kosmeticheskiy"
+                                                href="/uslugi/kosmeticheskiy"
                                                 className={
                                                     styles.sub_sub_menu__link
                                                 }
@@ -437,7 +437,7 @@ useEffect(() => {
                                             }
                                         >
                                             <Link
-                                                href="/remont-kvartir/v-novostroyke"
+                                                href="/uslugi/v-novostroyke"
                                                 className={
                                                     styles.sub_sub_menu__link
                                                 }
@@ -451,7 +451,7 @@ useEffect(() => {
                                             }
                                         >
                                             <Link
-                                                href="/remont-kvartir/odnokomnatnaya"
+                                                href="/uslugi/odnokomnatnaya"
                                                 className={
                                                     styles.sub_sub_menu__link
                                                 }
@@ -465,7 +465,7 @@ useEffect(() => {
                                             }
                                         >
                                             <Link
-                                                href="/remont-kvartir/dvuhkomnatnaya"
+                                                href="/uslugi/dvuhkomnatnaya"
                                                 className={
                                                     styles.sub_sub_menu__link
                                                 }
@@ -479,7 +479,7 @@ useEffect(() => {
                                             }
                                         >
                                             <Link
-                                                href="/remont-kvartir/trehkomnatnaya"
+                                                href="/uslugi/trehkomnatnaya"
                                                 className={
                                                     styles.sub_sub_menu__link
                                                 }
@@ -493,7 +493,7 @@ useEffect(() => {
                                             }
                                         >
                                             <Link
-                                                href="/remont-kvartir/studiya"
+                                                href="/uslugi/studiya"
                                                 className={
                                                     styles.sub_sub_menu__link
                                                 }
@@ -507,7 +507,7 @@ useEffect(() => {
                                             }
                                         >
                                             <Link
-                                                href="/remont-kvartir/vtorichka"
+                                                href="/uslugi/vtorichka"
                                                 className={
                                                     styles.sub_sub_menu__link
                                                 }
@@ -520,7 +520,7 @@ useEffect(() => {
 
                                 <li className={styles.sub_menu__item}>
                                     <Link
-                                        href="/otdelka-kvartir"
+                                        href="/uslugi/otdelka-kvartir"
                                         className={styles.sub_menu__link}
                                     >
                                         Отделка квартир
@@ -528,7 +528,7 @@ useEffect(() => {
                                 </li>
                                 <li className={styles.sub_menu__item}>
                                     <Link
-                                        href="/evroremont"
+                                        href="/uslugi/evroremont"
                                         className={styles.sub_menu__link}
                                     >
                                         Евроремонт
@@ -536,7 +536,7 @@ useEffect(() => {
                                 </li>
                                 <li className={styles.sub_menu__item}>
                                     <Link
-                                        href="/remont-ofisov"
+                                        href="/uslugi/remont-ofisov"
                                         className={styles.sub_menu__link}
                                     >
                                         Ремонт офисов
@@ -544,7 +544,7 @@ useEffect(() => {
                                 </li>
                                 <li className={styles.sub_menu__item}>
                                     <Link
-                                        href="/remont-restoranov"
+                                        href="/uslugi/remont-restoranov"
                                         className={styles.sub_menu__link}
                                     >
                                         Ремонт ресторанов
@@ -552,7 +552,7 @@ useEffect(() => {
                                 </li>
                                 <li className={styles.sub_menu__item}>
                                     <Link
-                                        href="/remont-domov-i-kottedzhey"
+                                        href="/uslugi/remont-domov-i-kottedzhey"
                                         className={styles.sub_menu__link}
                                     >
                                         Ремонт домов и коттеджей
@@ -560,7 +560,7 @@ useEffect(() => {
                                 </li>
                                 <li className={styles.sub_menu__item}>
                                     <Link
-                                        href="/dizajn-kvartir-pod-klyuch"
+                                        href="/uslugi/dizajn-kvartir-pod-klyuch"
                                         className={styles.sub_menu__link}
                                     >
                                         Дизайн квартир под ключ

@@ -1,0 +1,259 @@
+/* .prices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.prices__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+
+    max-width: 1140px;
+    margin: 3% auto;
+    row-gap: 30px;
+    position: relative;
+}
+
+@media (max-width:1024px) {
+    .prices {
+        padding: 6% 0% 6% 3%;
+    }
+
+    .prices__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-width: 1024px;
+    }
+}
+
+@media (max-width:767px) {
+    .prices {
+        padding: 7% 5% 7% 5%;
+    }
+
+    .prices__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-width: 767px;
+    }
+} */
+
+.pricingSection {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .sectionTitle {
+    color: #343332;
+    font-size: 45px;
+    font-family: var(--font-exo2), sans-serif;
+    font-weight: 500;
+    line-height: 45px;
+    text-align: left;
+    margin: 0;
+  }
+
+  .cardsContainer {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+  }
+
+  .card {
+    flex: 1;
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    outline: 2px #F3F3F3 solid;
+    outline-offset: -2px;
+    padding: 42px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .darkCard {
+    background: #343332;
+    outline: 2px #343332 solid;
+  }
+
+  .cardTitle {
+    color: #343332;
+    font-size: 40px;
+    font-family: var(--font-exo2), sans-serif;
+    font-weight: 500;
+    line-height: 48px;
+    margin: 0 0 20px;
+  }
+
+  .darkCard .cardTitle {
+    color: white;
+  }
+
+  .cardSubtitle {
+    color: #343332;
+    font-size: 24px;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 500;
+    line-height: 36px;
+    margin: 0 0 20px;
+  }
+
+  .darkCard .cardSubtitle {
+    color: white;
+  }
+
+  .priceContainer {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .price {
+    color: #579E6E;
+    font-size: 48px;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 400;
+    line-height: 48px;
+  }
+
+  .priceUnit {
+    color: #579E6E;
+    font-size: 20px;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 500;
+    line-height: 20px;
+    padding-bottom: 5px;
+  }
+
+  .featuresList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .featureItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    padding-bottom: 5px;
+  }
+
+  .featureIcon {
+    color: #579E6E;
+    font-size: 7px;
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+
+  .featureText {
+    color: #999998;
+    font-size: 16px;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 400;
+    line-height: 19px;
+  }
+
+  .downloadButton {
+    width: 100%;
+    padding: 17px 25px;
+    background: #579E6E;
+    border-radius: 500px;
+    border: none;
+    outline: 1px #579E6E solid;
+    outline-offset: -1px;
+    color: white;
+    font-size: 18px;
+    font-family: var(--font-exo2), sans-serif;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .downloadButton:hover {
+    background-color: #4a8a5e;
+  }
+
+  @media (max-width: 1024px) {
+    .cardsContainer {
+      flex-direction: column;
+    }
+
+    .sectionTitle {
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    .cardTitle {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    .cardSubtitle {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pricingSection {
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .sectionTitle {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    .card {
+      padding: 30px 20px;
+    }
+
+    .cardTitle {
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    .cardSubtitle {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .price {
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    .priceUnit {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    .featureText {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .downloadButton {
+      font-size: 16px;
+      padding: 15px 20px;
+    }
+  }

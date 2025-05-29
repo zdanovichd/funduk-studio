@@ -30,6 +30,8 @@
     color: var(--color-primary);
 }
 
+.whyussection__afterBottom,
+.whyussection__beforeTitle,
 .whyussection__topData,
 .whyussection__bottomData {
     border-width: 0px;
@@ -41,6 +43,8 @@
     padding: 0px 0px 0px 0px;
 }
 
+.whyussection__afterBottom span,
+.whyussection__beforeTitle span,
 .whyussection__topData span,
 .whyussection__bottomData span {
     color: var(--color-accent);
@@ -48,6 +52,8 @@
     font-weight: 500;
 }
 
+.whyussection__afterBottom a,
+.whyussection__beforeTitle a,
 .whyussection__topData a,
 .whyussection__bottomData a {
     color: var( --color-primary );
@@ -55,6 +61,8 @@
     font-weight: 500;
 }
 
+.whyussection__afterBottom b,
+.whyussection__beforeTitle b,
 .whyussection__topData b,
 .whyussection__bottomData b {
     color: #000000;
@@ -62,16 +70,35 @@
     font-weight: 550;
 }
 
+.whyussection__afterBottom li,
+.whyussection__beforeTitle li,
 .whyussection__topData li,
 .whyussection__bottomData li {
     padding-left: 10px;
 }
 
+.whyussection__afterBottom p,
+.whyussection__beforeTitle p,
 .whyussection__topData p,
 .whyussection__bottomData p {
     margin: 5px 0 10px;
 }
 
+.whyussection__afterBottom h2,
+.whyussection__beforeTitle h2,
+.whyussection__topData h2,
+.whyussection__bottomData h2 {
+    font-family: var(--font-exo2), Sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    color: var( --color-primary );
+    text-decoration: none;
+    line-height: 54px;
+    margin: 30px 0 20px;
+}
+
+.whyussection__afterBottom h3,
+.whyussection__beforeTitle h3,
 .whyussection__topData h3,
 .whyussection__bottomData h3 {
     color: var( --color-primary );
@@ -104,6 +131,16 @@
 
 .whyussection__button._active {
     color: var(--color-primary);
+}
+
+.whyussection__bottomImage {
+    position: relative;
+    height: 347px;
+}
+
+.whyussection__bottomImage__img {
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 @media (max-width:1024px) {
