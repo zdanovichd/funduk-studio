@@ -374,7 +374,7 @@ export default async function Page({ params }) {
                 form_button="Оставить заявку"
             />
             <HowWeWork
-                title={"Как мы работаем"}
+                title={usluga.other_data.howwework}
                 description="Наша команда специалистов с&nbsp;многолетним опытом и&nbsp;знанием тонкостей хорошего ремонта нацелена на&nbsp;создание уютного дома, который будет радовать вас долгие годы."
                 slides={[
                     {
