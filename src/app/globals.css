@@ -186,3 +186,47 @@ input[type='number'] {
 ul, ol {
     list-style-position: inside;
 }
+
+.list-type_line {
+    list-style-type: '– ';
+}
+
+.list-type_gift {
+    list-style-type: '🎁 ';
+}
+
+.not_found {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: var(--font-montserrat), Sans-serif;
+    font-weight: 400;
+    color: var(--color-primary);
+}
+
+.not_found h2 {
+    font-size: 40px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.not_found h2 span {
+    font-size: 100px;
+    color:#472D2C;
+    font-weight: 600;
+}
+
+.not_found p {
+    font-size: 20px;
+}
+
+.not_found a {
+    font-size: 20px;
+    /* color: var(--color-primary); */
+}

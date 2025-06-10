@@ -47,6 +47,8 @@ export default function Footer() {
     { icon: faVk, href: 'https://vk.com/brusnikaremontspb' }
   ];
 
+  const cleanPhone = (phone) => phone.replace(/[^\d+]/g, '').replace(/^(\+?7|8)/, '+7');
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -107,25 +109,32 @@ export default function Footer() {
               <p className={styles.contactLabel}>
                 <FontAwesomeIcon icon={faMapMarkerAlt} /> Адрес:
               </p>
-              <p className={styles.contactText}>
+              {/* <p className={styles.contactText}>
                 г. Санкт-Петербург, наб. реки Фонтанки, 129
-              </p>
+              </p> */}
+              <Link href="https://yandex.ru/maps/-/CHC7aCMI" className={styles.contactText}>
+                  г. Санкт-Петербург, наб. реки Фонтанки, 129
+              </Link>
+              {/* https://yandex.ru/maps/-/CHC7aCMI */}
             </div>
 
             <div className={styles.contactItem}>
               <p className={styles.contactLabel}>
                 <FontAwesomeIcon icon={faEnvelope} /> Email:
               </p>
-              <p className={styles.contactText}>fundukdesign@yandex.ru</p>
+              {/* <p className={styles.contactText}>fundukdesign@yandex.ru</p> */}
+              <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} className={styles.contactText}>
+                  {process.env.NEXT_PUBLIC_EMAIL}
+              </Link>
             </div>
 
             <div className={styles.contactItem}>
               <p className={styles.contactLabel}>
                 <FontAwesomeIcon icon={faPhoneAlt} /> Телефон:
               </p>
-              <p className={`${styles.contactText} ${styles.bold}`}>
-                +7 (981) 007-60-17
-              </p>
+              <Link href={`tel:${cleanPhone(process.env.NEXT_PUBLIC_PHONE_NUMBER)}`} className={styles.contactText}>
+                  {process.env.NEXT_PUBLIC_PHONE_NUMBER}
+              </Link>
             </div>
 
             <div className={styles.social}>

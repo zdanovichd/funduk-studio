@@ -473,6 +473,7 @@
 
     .form__image {
       max-width: 35%;
+      width: 100%;
     }
 
     .form__container {

@@ -22,24 +22,55 @@ export default async function Hero({ title = "", content = [], formEnabled = fal
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 1920px"
                 />
             <div className={styles.overlay}></div>
-            <div className={styles.content}>
+            <div className={`${styles.content} ${!formEnabled ? styles.one_col : styles.two_col}`}>
 
                 <div className={styles.content__inner}>
                     {breadcrumbs && breadcrumbs.length > 0 && (
-                        <div className={styles.breadcrumbs}>
-                            {breadcrumbs.map((crumb, index) => (
-                                <React.Fragment key={index}>
+                        <>
+                            <div className={styles.breadcrumbs}>
+                                {breadcrumbs.map((crumb, index) => (
+                                    <React.Fragment key={index}>
                                     {index > 0 && <span className={styles.breadcrumbSeparator}> / </span>}
-                                    {crumb.path ? (
+
+                                    {index < breadcrumbs.length - 1 ? (
+                                        // Все элементы кроме последнего - ссылки (если есть path)
+                                        crumb.path ? (
                                         <Link href={crumb.path} className={styles.breadcrumbLink}>
                                             {crumb.title}
                                         </Link>
+                                        ) : (
+                                        <span className={styles.breadcrumbLink}>
+                                            {crumb.title}
+                                        </span>
+                                        )
                                     ) : (
-                                        <span className={styles.breadcrumbCurrent}>{crumb.title}</span>
+                                        // Последний элемент - span, но с сохранением path в данных (если есть)
+                                        <span
+                                        className={styles.breadcrumbCurrent}
+                                        {...(crumb.path ? { 'data-path': crumb.path } : {})}
+                                        >
+                                        {crumb.title}
+                                        </span>
                                     )}
-                                </React.Fragment>
-                            ))}
-                        </div>
+                                    </React.Fragment>
+                                ))}
+                            </div>
+                                <script
+                                    type="application/ld+json"
+                                    dangerouslySetInnerHTML={{
+                                        __html: JSON.stringify({
+                                            "@context": "https://schema.org",
+                                            "@type": "BreadcrumbList",
+                                            "itemListElement": breadcrumbs.filter(crumb => crumb.path !== null).map((crumb, index) => ({
+                                                "@type": "ListItem",
+                                                "position": index + 1,
+                                                "name": crumb.title,
+                                                "item": crumb.path ? `${typeof window !== 'undefined' ? window.location.origin : process.env.CURRENT_DOMAIN}${crumb.path}` : undefined
+                                            })).filter(item => item.item)
+                                        })
+                                    }}
+                                />
+                        </>
                     )}
                     <h1 className={styles.content__title}>{title}</h1>
                     {content && content.length > 0 && !Array.isArray(content)&&

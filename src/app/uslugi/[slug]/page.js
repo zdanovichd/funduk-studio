@@ -52,9 +52,45 @@ export default async function Page({ params }) {
 
     // Находим соответствующую услугу
     const usluga = data.find((item) => item.slug === slug);
+    let parent = null;
+    let breadcrumbs = [
+      { title: "Главная", path: "/" },
+      { title: "Услуги", path: "/uslugi" },
+    ]
+    if (usluga.parent != null) {
+        parent = data.find((item) => item.slug === usluga.parent);
 
+        // Добавляем родителя только если это страница (is_page === true)
+        if (parent.is_page) {
+            breadcrumbs.push({
+            title: parent.h1,
+            path: "/uslugi/"+parent.slug
+            });
+        } else {
+            // Если родитель не страница, добавляем только его название без пути
+            breadcrumbs.push({
+            title: parent.h1,
+            path: null // или просто не указываем path
+            });
+        }
+
+        // Добавляем текущую услугу
+        breadcrumbs.push({
+            title: usluga.h1,
+            path: "/uslugi/"+usluga.slug
+        });
+    } else {
+        // Если нет родителя, добавляем только текущую услугу
+        breadcrumbs.push({
+            title: usluga.h1,
+            path: "/uslugi/"+usluga.slug
+        });
+    }
     // Если услуга не найдена, показываем 404
     if (!usluga) {
+        notFound();
+    }
+    if (!usluga.is_page) {
         notFound();
     }
 
@@ -62,11 +98,7 @@ export default async function Page({ params }) {
         <main>
             <Hero
                 title={usluga.h1}
-                breadcrumbs={[
-                    { title: "Главная", path: "/" },
-                    { title: "Услуги", path: "/uslugi" },
-                    { title: usluga.h1 },
-                ]}
+                breadcrumbs={breadcrumbs}
                 formEnabled={true}
                 content={usluga.subtitle}
             />
@@ -367,9 +399,9 @@ export default async function Page({ params }) {
             <Partners />
             <BannerFeedback
                 bg_url="/zamer.webp"
-                title="Первым делом необходимо выполнить замер квартиры"
+                title={usluga.banners[0].banner_title}
                 description="Чтобы мы&nbsp;смогли максимально точно оценить стоимость ремонта и&nbsp;правильно составить смету"
-                form_title="Записаться на&nbsp;замер квартиры"
+                form_title={usluga.banners[0].form_title}
                 form_subtitle="Специалист свяжется с&nbsp;Вами и&nbsp;подберет удобную дату и&nbsp;время для приезда. Замер занимает не&nbsp;более 1&nbsp;часа."
                 form_button="Оставить заявку"
             />
@@ -410,9 +442,9 @@ export default async function Page({ params }) {
             />
             <BannerFeedback
                 bg_url="/form.webp"
-                title="Индивидуальный подход к&nbsp;каждому проекту"
+                title={usluga.banners[1].banner_title}
                 description="Мы&nbsp;всегда готовы ответить на&nbsp;любые возникшие вопросы"
-                form_title="Запишитесь на&nbsp;расчет стоимости ремонта вашей квартиры"
+                form_title={usluga.banners[1].form_title}
                 form_subtitle="Специалист свяжется с&nbsp;Вами и&nbsp;подберет удобную дату и&nbsp;время для приезда."
                 form_button="Оставить заявку"
             />

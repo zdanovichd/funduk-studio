@@ -5,6 +5,7 @@ import React from 'react';
 import Hero from "@/app/components/sections/Hero/Hero";
 import PortfolioSection from "@/app/components/sections/PortfolioSection/PortfolioSection";
 import BannerFeedback from "@/app/components/sections/BannerFeedback/BannerFeedback";
+import data from "../json/data.json";
 
 export const metadata = {
   title: 'Услуги - ФУНДУК - Дизайн и ремонт квартир в Санкт-Петербурге',
@@ -71,16 +72,16 @@ export default function Home() {
         title="Услуги"
         breadcrumbs={[
           { title: "Главная", path: "/" },
-          { title: "Услуги" },
+          { title: "Услуги", path: "/uslugi" },
         ]}
       />
         <section className={styles.uslugi}>
             <div className={styles.uslugi__wrapper}>
-                {uslugi.map((usluga, index) => (
+                {data.filter(usluga => usluga.is_page !== false).map((usluga, index) => (
                     <Link
                         key={index}
                         className={`${styles.uslugi__item}`}
-                        href={usluga.link}
+                        href={`/uslugi/${usluga.slug}`}
                     >
                         <div className={`${styles.slide__content} ${styles.uslugi__item_odd}`}>
                             <div
@@ -94,7 +95,7 @@ export default function Home() {
                                 className={styles.slide__content_inner}
                             >
                                 <h3 className={styles.slide__title}>
-                                    {usluga.title}
+                                    {usluga.h1}
                                 </h3>
                             </div>
                         </div>

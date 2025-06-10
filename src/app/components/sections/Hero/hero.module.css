@@ -54,6 +54,10 @@
     justify-content: center;
 }
 
+.one_col .content__inner:nth-child(1) {
+    width: 100%;
+}
+
 .content__title {
     font-family: var(--font-exo2), Sans-serif;
     font-size: 60px;
@@ -138,6 +142,11 @@
     .content__inner:nth-child(2) {
         width: 45%;
     }
+
+    .one_col .content__inner:nth-child(1) {
+    width: 100%;
+}
+
 
     .content__title {
         font-size: 36px;
