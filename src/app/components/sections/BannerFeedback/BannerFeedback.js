@@ -18,10 +18,13 @@ export default function BannerFeedback({ bg_url = "/bg.webp", title = [], descri
                 />
                 <div className={styles.overlay}></div>
                 <div className={styles.banner__content}>
+                    {title != '' &&
+
                     <div className={styles.banner__item}>
                         <h2 className={styles.banner__title}>{title}</h2>
                         <p className={styles.banner__description}>{description}</p>
                     </div>
+                    }
                     <div className={styles.banner__item}>
                         <PhoneForm
                             title={form_title}

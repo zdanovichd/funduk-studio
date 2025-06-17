@@ -43,7 +43,7 @@ export default function CustomerReviews({
 
                             <SwiperSlide key={index} className={styles.customerreviews__slider_slide}>
 
-                                <div className={styles.slide__inner}>
+                                <div className={styles.slide__inner} style={slide.video_overlay != '' ? {"width": "50%"} : {"width": "100%"}}>
                                     <div className={styles.slide__top}>
                                         <div className={styles.slide__info}>
                                             <div className={styles.slide__image}>
@@ -63,14 +63,17 @@ export default function CustomerReviews({
                                     </div>
                                     <p className={styles.slide__content}>{slide.review}</p>
                                 </div>
-                                <div className={styles.slide__inner}>
-                                    <Image
-                                        src={slide.video_overlay}
-                                        fill
-                                        alt={slide.name}
-                                        className={styles.slide__video_overlay}
-                                    />
-                                </div>
+                                {slide.video_overlay != '' &&
+
+                                    <div className={styles.slide__inner}>
+                                        <Image
+                                            src={slide.video_overlay}
+                                            fill
+                                            alt={slide.name}
+                                            className={styles.slide__video_overlay}
+                                        />
+                                    </div>
+                                }
                                 <div className={styles.slide__inner}>
                                     <p className={styles.slide__content}>{slide.review}</p>
                                 </div>

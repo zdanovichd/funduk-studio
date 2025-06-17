@@ -64,7 +64,7 @@ export default function FaqSection({
                         style={{ top: headerHeight + 10 + "px" }}
                     >
                         <h2 className={styles.faqsection__title}>{title}</h2>
-                        <Link className={styles.faqsection__link} href="/faq">Задать свой вопрос →</Link>
+                        <Link className={styles.faqsection__link} href="/">Задать свой вопрос →</Link>
                     </div>
                 </div>
                 <div className={styles.faqsection__inner}>

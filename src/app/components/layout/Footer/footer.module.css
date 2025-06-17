@@ -255,9 +255,15 @@
         display: none;
     }
 
-    .contacts {
+    .logo {
         align-items: center;
         max-width: 90%;
+        width: 100%;
+    }
+
+    .contacts {
+        align-items: center;
+        max-width: 70%;
         width: 100%;
     }
 

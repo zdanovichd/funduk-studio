@@ -12,9 +12,11 @@ import { Pagination } from "swiper/modules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faCalendar } from "@fortawesome/free-regular-svg-icons"; // solid (по умолчанию)
+import posts from "@/app/json/posts.json";
+
 export default function PostsSection({
     title = "Статьи",
-    slides = [],
+    // slides = [],
 }) {
     const swiperRef = useRef();
     const { innerWidth, innerHeight } = useWindowSize();
@@ -72,7 +74,7 @@ export default function PostsSection({
                         containerClass={styles.swiper_container} // Класс для контейнера
                         wrapperClass={styles.swiper_wrapper}
                     >
-                        {slides.map((content, index) => (
+                        {posts.map((post, index) => (
                             <SwiperSlide
                                 key={index}
                                 className={styles.postssection__item}
@@ -82,20 +84,20 @@ export default function PostsSection({
                                         className={styles.slide__content_inner}
                                     >
                                         <Image
-                                            src={content.image}
+                                            src={post.main_content.image}
                                             fill
                                             className={styles.slide__content_image}
-                                            alt={content.title}
+                                            alt={post.h1}
                                         />
                                     </div>
                                     <div
                                         className={styles.slide__content_inner}
                                     >
                                         <p className={styles.slide__title}>
-                                            {content.title}
+                                            {post.h1}
                                         </p>
                                         <p className={styles.slide__subtitle}>
-                                            {content.subtitle}
+                                            {post.main_content.short_description}
                                         </p>
                                     </div>
                                     <div
@@ -103,10 +105,10 @@ export default function PostsSection({
                                     >
                                         <div className={styles.date}>
                                             <FontAwesomeIcon icon={faCalendar} />
-                                            <p>{content.date}</p>
+                                            <p>{post.date}</p>
                                         </div>
                                         <div className={styles.link}>
-                                            <Link href={content.link}>Подробнее →</Link>
+                                            <Link href={`/blog/${post.slug}`}>Подробнее →</Link>
                                         </div>
                                     </div>
                                 </div>

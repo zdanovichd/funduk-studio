@@ -42,7 +42,7 @@
 .banner__item {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: auto;
     justify-content: space-between;
     z-index: 3;
     gap: 10px;

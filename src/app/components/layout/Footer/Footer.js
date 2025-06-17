@@ -31,14 +31,14 @@ export default function Footer() {
   ];
 
   const servicesLinks = [
-    { name: 'Студия дизайна интерьеров', href: '/services/design-studio' },
-    { name: 'Дизайн-проект квартир', href: '/services/apartment-design' },
-    { name: 'Дизайн интерьера', href: '/services/interior-design' },
-    { name: 'Ремонт квартир', href: '/services/apartment-renovation' },
-    { name: 'Ремонт в новостройке', href: '/services/new-building' },
-    { name: 'Ремонт в студии', href: '/services/studio' },
-    { name: 'Ремонт офисов', href: '/services/office' },
-    { name: 'Ремонт ресторанов', href: '/services/restaurant' }
+    { name: 'Студия дизайна интерьеров', href: '/uslugi/design-studio' },
+    { name: 'Дизайн-проект квартир', href: '/uslugi/apartment-design' },
+    { name: 'Дизайн интерьера', href: '/uslugi/interior-design' },
+    { name: 'Ремонт квартир', href: '/uslugi/apartment-renovation' },
+    { name: 'Ремонт в новостройке', href: '/uslugi/new-building' },
+    { name: 'Ремонт в студии', href: '/uslugi/studio' },
+    { name: 'Ремонт офисов', href: '/uslugi/office' },
+    { name: 'Ремонт ресторанов', href: '/uslugi/restaurant' }
   ];
 
   const socialLinks = [

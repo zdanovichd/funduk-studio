@@ -1,0 +1,178 @@
+.komanda {
+    padding: 3% 0;
+}
+
+.komanda__wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 1140px;
+    display: flex;
+    margin: 0 auto;
+    /* padding: 5% 3% 3% 3%; */
+}
+
+.text {
+    padding: 3% 0;
+}
+
+.text__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
+    display: flex;
+    margin: 0 auto;
+    /* padding: 5% 3% 3% 3%; */
+}
+
+.text__title {
+    font-family: var(--font-exo2), Sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    color: var(--color-primary);
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.text__description {
+    font-family: var(--font-montserrat), Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var( --color-primary );
+    padding-bottom: 10px;
+}
+
+.komanda__column {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* height: auto; */
+    min-width: 450px;
+    gap: 35px;
+}
+
+.komanda__column:nth-child(1) {
+    width: 60%;
+}
+
+.komanda__column:nth-child(2) {
+    width: 40%;
+    padding: 0 0 0 35px;
+}
+
+.komanda__column_bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.komanda__image {
+    object-fit: cover;
+    border-radius: 25px 25px 25px 25px;
+}
+
+.komanda__column_top {
+    font-family: var(--font-montserrat), Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var( --color-primary );
+}
+
+.komanda__column_item {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+.komanda__column_icon {
+    background-color: var(--color-accent);
+    padding: 12.5px;
+    border-radius: 10%;
+    line-height: 0;
+}
+
+.komanda__column_descr {
+    font-family: var(--font-montserrat), Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3em;
+    color: var( --color-primary );
+}
+
+
+@media (max-width:1024px) {
+
+    .komanda__wrapper {
+        max-width: 1024px;
+        padding: 3%;
+    }
+
+    .komanda__title {
+        font-size: 36px;
+    }
+
+    .route__wrapper {
+        max-width: 1024px;
+        padding: 3%;
+    }
+
+    .route__title {
+        font-size: 36px;
+    }
+
+    .text__wrapper {
+        max-width: 1024px;
+        padding: 3%;
+    }
+
+    .text__title {
+        font-size: 36px;
+    }
+
+    .text__description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:767px) {
+    .komanda__wrapper {
+        max-width: 767px;
+        padding: 12% 5% 7%;
+        flex-direction: column;
+    }
+
+    .komanda__column:nth-child(1) {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .komanda__column:nth-child(2) {
+        width: 100%;
+        padding: 0 0 0 0;
+    }
+
+    .komanda__title {
+        font-size: 29px;
+    }
+
+    .route__wrapper {
+        max-width: 767px;
+        padding: 12% 5% 7%;
+    }
+
+    .route__title {
+        font-size: 29px;
+    }
+
+    .text__wrapper {
+        max-width: 767px;
+        padding: 12% 5% 7%;
+    }
+
+    .text__title {
+        font-size: 29px;
+    }
+}
