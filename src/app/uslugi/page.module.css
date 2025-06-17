@@ -1,0 +1,138 @@
+.uslugi {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* padding: 6% 0% 6% 0%; */
+    /* height: max-content; */
+}
+
+.uslugi__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 100%;
+    width: 100%;
+
+    max-width: 1140px;
+    margin: 3% auto;
+    row-gap: 30px;
+    position: relative;
+}
+
+.slide__content {
+    z-index: 3;
+}
+
+.slide__number {
+    font-family: var(--font-montserrat), Sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var( --color-accent );
+    text-align: end;
+}
+
+.uslugi__item {
+
+    width: 33%;
+    text-decoration: none;
+}
+
+.uslugi__item_even {
+    background-color: #343332;
+}
+
+.uslugi__item_odd {
+    background-color: #F3F3F3;
+}
+
+.slide__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0 10px 20px;
+    padding: 40px 40px 40px 40px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.slide__title {
+    font-family: var(--font-exo2), Sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+}
+
+.uslugi__item_even .slide__title {
+    color: #ffffff;
+}
+
+.uslugi__item_odd .slide__title {
+    color: var( --color-primary );
+}
+
+.slide__title_link {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.slide__subtitle {
+    font-family: var(--font-montserrat), Sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #999998;
+}
+
+.slide__content_inner {
+    /* width: max-content; */
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    gap: 10px;
+}
+
+.slide__button {
+    box-sizing:border-box;
+    background-color: #FFFFFF00;
+    font-family: var(--font-exo2), Sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 500px;
+    padding: 16px 24px;
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width:1024px) {
+    .uslugi {
+        padding: 6% 3% 6% 3%;
+    }
+
+    .slide__title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:767px) {
+    .uslugi {
+        padding: 7% 5% 7% 5%;
+    }
+
+    .uslugi__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .uslugi__item {
+        width: 100%;
+    }
+}

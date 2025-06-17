@@ -1,0 +1,138 @@
+.textwaccordion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* padding: 6% 0% 6% 0%; */
+    /* height: max-content; */
+}
+
+.textwaccordion__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    /* height: 440px; */
+    /* height: auto; */
+    height: 100%;
+    position: relative;
+
+    max-width: 1140px;
+    margin: 3% auto;
+    gap: 40px;
+}
+
+.textwaccordion__banner {
+    background-color: #F4F4F4;
+    display: flex;
+    flex-direction: row;
+    padding: 5% 5% 5% 5%;
+    border-radius: 20px 20px 20px 20px;
+    gap: 30px;
+}
+
+.textwaccordion__left {
+    width: 50%;
+}
+
+.textwaccordion__title {
+    font-family: var(--font-exo2), Sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.textwaccordion__right {
+    width: 50%;
+}
+
+.textwaccordion__rtop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.textwaccordion__data {
+    display: flex;
+    gap: 7px;
+    flex-direction: column;
+}
+
+.textwaccordion__name {
+    font-family: var(--font-exo2), Sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.textwaccordion__position {
+    font-family: var(--font-montserrat), Sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #999998;
+}
+
+.textwaccordion__description {
+    margin: 8% 0% 0% 0%;
+    font-family: var(--font-montserrat), Sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    color: var( --color-primary );
+    line-height: 20px;
+}
+
+@media (max-width:1024px) {
+    .textwaccordion {
+        padding: 6% 3% 6% 3%;
+    }
+
+    .textwaccordion__title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width:767px) {
+    .textwaccordion {
+        padding: 7% 5% 7% 5%;
+    }
+
+    .textwaccordion__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .textwaccordion__banner {
+        flex-direction: column;
+    }
+
+    .textwaccordion__title {
+        font-size: 29px;
+        padding-right: 6%;
+    }
+
+    .textwaccordion__left {
+        width: 100%;
+    }
+
+    .textwaccordion__right {
+        width: 100%;
+    }
+
+    .textwaccordion__name {
+
+        font-size: 16px;
+    }
+
+    .textwaccordion__position {
+        font-size: 10px;
+    }
+
+    .textwaccordion__description {
+        font-size: 12px;
+    }
+}

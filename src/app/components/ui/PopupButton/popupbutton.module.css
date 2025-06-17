@@ -1,0 +1,81 @@
+.modalButton {
+    display: flex;
+    font-family: var(--font-exo2), Sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    /* border-color: var(--color-accent); */
+    border-radius: 500px 500px 500px 500px;
+    padding: 16px 24px 16px 24px;
+    background-color: #fff;
+    /* fill: var(--color-accent); */
+    /* color: var(--color-accent); */
+    cursor: pointer;
+    width: 100%;
+    /* margin: 0 auto; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* .modalButton:hover {
+    background-color: #005bb5;
+  } */
+
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modalContent {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+  }
+
+  .closeButton:hover {
+    color: #333;
+  }
+
+  .btn {
+    font-family: var(--font-exo2), Sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: var(--color-primary);
+    border-radius: 500px 500px 500px 500px;
+    padding: 16px 24px 16px 24px;
+ }
+
+ .btn__callback {
+    background-color: #fff;
+    fill: var(--color-primary);
+    color: var(--color-primary);
+    cursor: pointer;
+ }

@@ -1,0 +1,110 @@
+.komanda {
+    padding: 3% 0;
+}
+
+.komanda__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
+    gap: 40px;
+    display: flex;
+    margin: 0 auto;
+    /* padding: 5% 3% 3% 3%; */
+}
+
+.komanda__title {
+    font-family: var(--font-exo2), Sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    color: var(--color-primary);
+    text-align: left;
+}
+
+.komanda__description {
+    font-family: var(--font-montserrat), Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var( --color-primary );
+}
+
+.komanda__description p {
+    padding-bottom: 8px;
+}
+
+.komanda__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.komanda__item {
+    width: 25%;
+    padding: 10px;
+}
+
+.komanda__photo {
+    position: relative;
+    width: 100%;
+    height: 276px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.komanda__photo img {
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.komanda__name {
+    text-align: center;
+    color: var( --color-primary );
+    font-family: var(--font-montserrat), Sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.2em;
+    margin-block-start: 10px;
+}
+
+.komanda__post {
+    text-align: center;
+    color: var( --color-primary );
+    font-family: var(--font-montserrat), Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2em;
+    margin-block-start: 10px;
+}
+
+
+@media (max-width:1024px) {
+
+    .komanda__wrapper {
+        max-width: 1024px;
+        padding: 3%;
+    }
+
+    .komanda__title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width:767px) {
+    .komanda__wrapper {
+        max-width: 767px;
+        padding: 12% 5% 7%;
+    }
+
+    .komanda__title {
+        font-size: 29px;
+    }
+
+    .komanda__item {
+    width: 50%;
+    padding: 10px;
+}
+
+}
