@@ -5,7 +5,10 @@ import Header from "./components/layout/Header/Header";
 import Footer from "./components/layout/Footer/Footer";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import YandexMetrikaContainer from "./components/layout/YandexMetrikaContainer/YandexMetrikaContainer";
 config.autoAddCss = false
+const analyticsEnabled = !!(process.env.NODE_ENV === "production");
+// const analyticsEnabled = true;
 
 export const metadata = {
   title: "Create Next App",
@@ -20,6 +23,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer/>
         <SpeedInsights/>
+        <YandexMetrikaContainer enabled={analyticsEnabled} />
       </body>
     </html>
   );
