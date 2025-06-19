@@ -20,25 +20,22 @@ export default function Footer() {
 
   const currentYear = new Date().getFullYear();
   const companyLinks = [
-    { name: 'Наши работы', href: '/portfolio' },
-    { name: 'Цены', href: '/pricing' },
+    // { name: 'Наши работы', href: '/portfolio' },
+    // { name: 'Цены', href: '/pricing' },
     { name: 'Отзывы', href: '/reviews' },
     { name: 'Блог', href: '/blog' },
     { name: 'О компании', href: '/about' },
     { name: 'Контакты', href: '/contacts' },
-    { name: 'Политика конфиденциальности', href: '/privacy' },
+    // { name: 'Политика конфиденциальности', href: '/privacy' },
     { name: 'Брусника ремонт СПб', href: 'https://remont-s-pb.ru/' }
   ];
 
   const servicesLinks = [
-    { name: 'Студия дизайна интерьеров', href: '/uslugi/design-studio' },
-    { name: 'Дизайн-проект квартир', href: '/uslugi/apartment-design' },
-    { name: 'Дизайн интерьера', href: '/uslugi/interior-design' },
-    { name: 'Ремонт квартир', href: '/uslugi/apartment-renovation' },
-    { name: 'Ремонт в новостройке', href: '/uslugi/new-building' },
-    { name: 'Ремонт в студии', href: '/uslugi/studio' },
-    { name: 'Ремонт офисов', href: '/uslugi/office' },
-    { name: 'Ремонт ресторанов', href: '/uslugi/restaurant' }
+    { name: 'Ремонт в студии', href: '/uslugi/studiya' },
+    { name: 'Ремонт однокомнатной квартиры', href: '/uslugi/odnokomnatnaya' },
+    { name: 'Ремонт двухкомнатной квартиры', href: '/uslugi/dvuhkomnatnaya' },
+    { name: 'Ремонт трехкомнатной квартиры', href: '/uslugi/trehkomnatnaya' },
+    { name: 'Ремонт четырехкомнатной квартиры', href: '/uslugi/chetyrehkomnatnaya' },
   ];
 
   const socialLinks = [

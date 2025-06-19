@@ -407,7 +407,7 @@ export default function Header() {
                             </ul>
                         </li>
 
-                        <li
+                        {/* <li
                             className={`${styles.nav_menu__item} ${
                                 activeMenus.portfolio ? styles._active : ""
                             } ${styles.nav_menu__item_has_children}`}
@@ -472,16 +472,16 @@ export default function Header() {
                                     </Link>
                                 </li>
                             </ul>
-                        </li>
+                        </li> */}
 
-                        <li className={styles.nav_menu__item}>
+                        {/* <li className={styles.nav_menu__item}>
                             <Link
                                 href="#"
                                 className={styles.nav_menu__link}
                             >
                                 Скидки и Акции
                             </Link>
-                        </li>
+                        </li> */}
                         <li className={styles.nav_menu__item}>
                             <Link
                                 href="/blog"

@@ -14,58 +14,6 @@ export const metadata = {
 
 export default function Home() {
 
-    const uslugi = [
-        {
-            title: "Ремонт домов и коттеджей",
-            link: "/uslugi/remont-domov-i-kottedzhey",
-        },
-        {
-            title: "Ремонт квартир",
-            link: "/uslugi/remont-kvartir",
-        },
-        {
-            title: "Ремонт офисов",
-            link: "/uslugi/remont-ofisov",
-        },
-        {
-            title: "Ремонт ресторанов",
-            link: "/uslugi/remont-restoranov",
-        },
-        {
-            title: "Евроремонт",
-            link: "/uslugi/evroremont",
-        },
-        {
-            title: "Ремонт однокомнатной квартиры",
-            link: "/uslugi/odnokomnatnaya",
-        },
-        {
-            title: "Ремонт двухкомнатной квартиры",
-            link: "/uslugi/dvuhkomnatnaya",
-        },
-        {
-            title: "Ремонт трехкомнатной квартиры",
-            link: "/uslugi/trehkomnatnaya",
-        },
-        {
-            title: "Ремонт ЖК",
-            link: "/uslugi/remont-v-zhk",
-        },
-        {
-            title: "Дизайн интерьера",
-            link: "/uslugi/dizayn-interera",
-        },
-        {
-            title: "Дизайн квартир под ключ",
-            link: "/uslugi/dizajn-kvartir-pod-klyuch",
-        },
-        {
-            title: "Дизайн-проект квартир",
-            link: "/uslugi/dizayn-proekt-kvartir",
-        },
-    ]
-
-
   return (
     <main>
       <Hero
