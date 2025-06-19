@@ -7,8 +7,9 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import YandexMetrikaContainer from "./components/layout/YandexMetrikaContainer/YandexMetrikaContainer";
 config.autoAddCss = false
-const analyticsEnabled = !!(process.env.NODE_ENV === "production");
+const analyticsEnabled = !!(process.env.CURRENT_DOMAIN === "https://funduk.studio");
 // const analyticsEnabled = true;
+
 
 export const metadata = {
   title: "Create Next App",
