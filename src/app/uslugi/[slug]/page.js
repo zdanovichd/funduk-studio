@@ -115,7 +115,7 @@ export default async function Page({ params }) {
                             price: "352 500 руб",
                         },
                         image: "/portfolio/01image.webp",
-                        link: "/dizajn-proekt-kvartiry-1053-m2",
+                        link: "#",
                     },
                     {
                         title: "Ремонт двухкомнатной квартиры Академгородок",

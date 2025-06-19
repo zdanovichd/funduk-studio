@@ -55,7 +55,7 @@ export default function PortfolioSection({
                         style={{ top: headerHeight + 10 + "px" }}
                     >
                         <h2 className={styles.portfolio__title}>{title}</h2>
-                        <Link className={styles.portfolio__link} href="/nashi-raboty">Перейти ко всем работам →</Link>
+                        <Link className={styles.portfolio__link} href="#">Перейти ко всем работам →</Link>
                     </div>
                 </div>
                 <div className={styles.portfolio__inner}>
