@@ -40,12 +40,10 @@ export default function Home() {
         description={"Мы реализуем работы по внутренней отделке любой сложности, предоставляя полный комплекс услуг от начала до конца. Мы также занимаемся созданием дизайн-проектов интерьеров, гарантируя высокое качество и эксклюзивность."}
         slides={[
           { title: "Евроремонт", subtitle: "от 3 500 р/м² за работу", image: "/SE01-1.webp", link: "/evroremont" },
-          { title: "Ремонт однокомнатной квартиры", subtitle: "от 3 500 р/м² за работу", image: "/SE02-1.webp", link: "/remont-kvartir/odnokomnatnaya" },
-          { title: "Ремонт двухкомнатной квартиры", subtitle: "от 3 500 р/м² за работу", image: "/SE01-1.webp", link: "/remont-kvartir/dvuhkomnatnaya" },
-          { title: "Ремонт трехкомнатной квартиры", subtitle: "от 3 500 р/м² за работу", image: "/SE02-1.webp", link: "/remont-kvartir/trehkomnatnaya" },
-          { title: "Дизайн квартир под ключ", subtitle: "от 3 500 р/м² за работу", image: "/SE01-1.webp", link: "/dizajn-kvartir-pod-klyuch" },
-          { title: "Дизайн-проект квартир", subtitle: "от 3 500 р/м² за работу", image: "/SE02-1.webp", link: "/dizayn-proekt-kvartir" },
-          { title: "Ремонт домов и коттеджей", subtitle: "от 3 500 р/м² за работу", image: "/SE01-1.webp", link: "/remont-domov-i-kottedzhey" },
+          { title: "Ремонт однокомнатной квартиры", subtitle: "от 3 500 р/м² за работу", image: "/SE02-1.webp", link: "/odnokomnatnaya" },
+          { title: "Ремонт двухкомнатной квартиры", subtitle: "от 3 500 р/м² за работу", image: "/SE01-1.webp", link: "/dvuhkomnatnaya" },
+          { title: "Ремонт трехкомнатной квартиры", subtitle: "от 3 500 р/м² за работу", image: "/SE02-1.webp", link: "/trehkomnatnaya" },
+          { title: "Дизайн под ключ", subtitle: "от 3 500 р/м² за работу", image: "/SE01-1.webp", link: "/dizajn-pod-klyuch" },
           { title: "Ремонт офисов", subtitle: "от 3 500 р/м² за работу", image: "/SE02-1.webp", link: "/remont-ofisov" },
           { title: "Ремонт ресторанов", subtitle: "от 3 500 р/м² за работу", image: "/SE01-1.webp", link: "/remont-restoranov" },
         ]}

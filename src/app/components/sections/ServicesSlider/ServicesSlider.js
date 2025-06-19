@@ -90,7 +90,7 @@ export default function ServicesSlider({
                                     >
                                         <Link
                                             className={styles.slide__title_link}
-                                            href={content.link}
+                                            href={`/uslugi/${content.link}`}
                                         >
                                             <h3 className={styles.slide__title}>
                                                 {content.title}
@@ -105,7 +105,7 @@ export default function ServicesSlider({
                                     >
                                         <Link
                                             className={styles.slide__button}
-                                            href={content.link}
+                                            href={`/uslugi/${content.link}`}
                                         >
                                             Подробнее
                                         </Link>
