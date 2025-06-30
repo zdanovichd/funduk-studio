@@ -5,7 +5,9 @@ import React, { useState, useEffect, useRef } from 'react';
 export default function PhoneForm({ title = [], subtitle = [], button = [] }) {
 
     const [value, setValue] = useState('');
+    const [consentPrivacy, setConsentPrivacy] = useState(false);
     const inputRef = useRef(null);
+    const [isLoading, setIsLoading] = useState(false);
 
     const formatPhoneNumber = (input) => {
         if (!input) return '+7 (';
@@ -49,6 +51,8 @@ export default function PhoneForm({ title = [], subtitle = [], button = [] }) {
         }
     }
 
+
+
     useEffect(() => {
         // Обрабатываем автозаполнение
         const raw = inputRef.current?.value;
@@ -58,11 +62,31 @@ export default function PhoneForm({ title = [], subtitle = [], button = [] }) {
         }
     }, []);
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        setIsLoading(true);
+        try {
+            const data = { value, consentPrivacy };
+            console.log(data);
+            await fetch('../api/callback', {
+                method: 'POST',
+                body: JSON.stringify(data),
+            });
+        } catch (error) {
+            setError(error.message);
+        } finally {
+            setValue('');
+            setIsLoading(false);
+            setConsentPrivacy(false)
+        }
+    }
+
     return (
         <div className={styles.feedback}>
             <p className={styles.feedback__title} dangerouslySetInnerHTML={{ __html: title }}></p>
             <p className={styles.feedback__subtitle} dangerouslySetInnerHTML={{ __html: subtitle }}></p>
-            <form action="" method="get" className={styles.feedback__form}>
+            <form action="" method="get" className={styles.feedback__form} onSubmit={handleSubmit}>
                 <input
                     className={styles.feedback__phone}
                     ref={inputRef}
@@ -80,11 +104,14 @@ export default function PhoneForm({ title = [], subtitle = [], button = [] }) {
                     className={styles.feedback__submit}
                     type="submit"
                     dangerouslySetInnerHTML={{ __html: button }}
+                    disabled={isLoading}
                 ></button>
                 <div className={styles.feedback__checkbox}>
                     <input
                         type="checkbox"
                         id="consent"
+                        checked={consentPrivacy}
+                        onChange={() => setConsentPrivacy(!consentPrivacy)}
                         required
                         className={styles.feedback__checkbox_input}
                     />

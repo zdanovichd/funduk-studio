@@ -76,7 +76,7 @@ export default function Page() {
                     <p className={styles.vacancy__subtitle}><b>Собственный отдел дизайна</b> &mdash; проектируем и реализуем интерьеры без посредников</p>
                     <p className={styles.vacancy__subtitle}><b>Полный контроль процесса</b> &mdash; от выезда на объект до финальной приёмки</p>
                     <p className={styles.vacancy__subtitle}><b>Фиксированная стоимость</b> &mdash; никаких доплат по ходу работ</p>
-                    <p className={styles.vacancy__subtitle}><b>Гарантия до 3 лет</b> на все виды работ</p>
+                    <p className={styles.vacancy__subtitle}><b>Гарантия до 5 лет</b> на все виды работ</p>
                     <p className={styles.vacancy__subtitle}><b>Работаем строго по договору</b> и соблюдаем сроки</p>
                     <p className={styles.vacancy__subtitle}><b>Персональный менеджер проекта</b> &mdash; всегда на связи</p>
                 </div>

@@ -134,7 +134,7 @@ export default function Page() {
                   </li>
                   <li className={styles.socials__item}>
                     <Link
-                      href="https://vk.com/brusnikaremontspb"
+                      href="https://vk.com/fundukstudia?from=groups"
                       target="_blank"
                       className={styles.socials__link}
                       aria-label="ВКонтакте"

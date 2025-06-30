@@ -27,7 +27,7 @@ export default function Footer() {
     { name: 'О компании', href: '/about' },
     { name: 'Контакты', href: '/contacts' },
     // { name: 'Политика конфиденциальности', href: '/privacy' },
-    { name: 'Брусника ремонт СПб', href: 'https://remont-s-pb.ru/' }
+    // { name: 'Брусника ремонт СПб', href: 'https://remont-s-pb.ru/' }
   ];
 
   const servicesLinks = [
@@ -41,7 +41,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: faTelegram, href: 'https://t.me/fundukstudiospb' },
     { icon: faWhatsapp, href: 'https://api.whatsapp.com/send?phone=79312236014' },
-    { icon: faVk, href: 'https://vk.com/brusnikaremontspb' }
+    { icon: faVk, href: 'https://vk.com/fundukstudia?from=groups' }
   ];
 
   const cleanPhone = (phone) => phone.replace(/[^\d+]/g, '').replace(/^(\+?7|8)/, '+7');
