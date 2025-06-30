@@ -1,7 +1,6 @@
 export default function robots() {
 
-    // if (process.env.CURRENT_DOMAIN === "https://funduk.studio") {
-    if (process.env.CURRENT_DOMAIN) {
+    if (process.env.CURRENT_DOMAIN === "https://funduk.studio") {
         return {
             rules: {
             userAgent: '*',
