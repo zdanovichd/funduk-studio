@@ -8,6 +8,7 @@ import styles from "./multistepform.module.css";
 export default function MultistepForm() {
     const [step, setStep] = useState(1);
     const [value, setValue] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
         area: "",
         repairType: "",
@@ -89,34 +90,40 @@ export default function MultistepForm() {
     // };
 
     // Удалить при подключении API
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Проверка обязательных полей (если нужно)
-        if (!formData.phone || !formData.contactMethod) {
-            alert("Пожалуйста, заполните все обязательные поля!");
-            return;
+        setIsLoading(true);
+        try {
+            const data = { formData };
+            console.log(data);
+            await fetch('../api/multiCallback', {
+                method: 'POST',
+                body: JSON.stringify(data),
+            });
+        } catch (error) {
+            setError(error.message);
+        } finally {
+            setIsLoading(false);
+            setFormData({
+                area: "",
+                repairType: "",
+                apartmentCondition: "",
+                rooms: "studio",
+                bathroom: "separate",
+                electricalWorks: [],
+                plumbingWorks: [],
+                additionalWorks: [],
+                gift: "",
+                contactMethod: "",
+                phone: "",
+            });
+            setStep(1); // Возврат к первому шагу
+            setValue(""); // Сброс маски телефона
         }
 
-        console.log("Form submitted:", formData);
-        alert("Форма отправлена! Мы свяжемся с вами в течение 30 минут.");
+        // alert("Форма отправлена! Мы свяжемся с вами в течение 30 минут.");
 
-        // Полный сброс формы
-        setFormData({
-            area: "",
-            repairType: "",
-            apartmentCondition: "",
-            rooms: "studio",
-            bathroom: "separate",
-            electricalWorks: [],
-            plumbingWorks: [],
-            additionalWorks: [],
-            gift: "",
-            contactMethod: "",
-            phone: "",
-        });
-        setStep(1); // Возврат к первому шагу
-        setValue(""); // Сброс маски телефона
     };
 
         const inputRef = useRef(null);
@@ -700,7 +707,8 @@ export default function MultistepForm() {
                                             className={`${styles.form__button} ${styles.form__button_submit}`}
                                             disabled={
                                                 !formData.contactMethod ||
-                                                !formData.phone
+                                                !formData.phone ||
+                                                isLoading
                                             }
                                         >
                                             Получить расчет стоимости

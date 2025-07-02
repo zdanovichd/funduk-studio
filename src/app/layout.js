@@ -19,6 +19,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
+      <head>
+        <meta
+          name="yandex-verification"
+          content={process.env.WEBMASTER_METATAG}
+      />
+      </head>
       <body className={`${exo2.variable} ${exo2Italic.variable} ${montserrat.variable} ${montserratItalic.variable}`}>
         <Header/>
         {children}

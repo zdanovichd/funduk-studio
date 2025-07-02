@@ -59,7 +59,7 @@ const MenuItem = ({ item, level = 0, activeMenus, toggleMenu, isMobile }) => {
                         className={linkClass}
                         onClick={handleClick}
                     >
-                        {item.h1}
+                        {item.menu_title}
                         {hasChildren && (
                             <FontAwesomeIcon
                                 icon={faCaretDown}
@@ -70,7 +70,7 @@ const MenuItem = ({ item, level = 0, activeMenus, toggleMenu, isMobile }) => {
                     </Link>
                 ) : (
                     <span className={linkClass}>
-                        {item.h1}
+                        {item.menu_title}
                         {hasChildren && (
                             <FontAwesomeIcon
                                 icon={faCaretDown}
@@ -213,7 +213,7 @@ export default function Header() {
                             >
                                 <div className={styles.info_block}>
                                     <p className={styles.info_block__title}>
-                                        Режим работы
+                                        Режим работы офиса
                                     </p>
                                     <p className={styles.info_block__text}>
                                         Пн-Пт: c 10:00 до 18:00
@@ -267,7 +267,7 @@ export default function Header() {
                                     </li>
                                     <li className={styles.socials__item}>
                                         <Link
-                                            href="https://vk.com/brusnikaremontspb"
+                                            href="https://vk.com/fundukstudia?from=groups"
                                             target="_blank"
                                             className={styles.socials__link}
                                             aria-label="ВКонтакте"
@@ -589,7 +589,7 @@ export default function Header() {
                     >
                         <div className={styles.info_block}>
                             <p className={styles.info_block__title}>
-                                Режим работы
+                                Режим работы офиса
                             </p>
                             <p className={styles.info_block__text}>
                                 Пн-Пт: c 10:00 до 18:00
@@ -650,7 +650,7 @@ export default function Header() {
                             </li>
                             <li className={styles.socials__item}>
                                 <Link
-                                    href="https://vk.com/brusnikaremontspb"
+                                    href="https://vk.com/fundukstudia?from=groups"
                                     target="_blank"
                                     className={styles.socials__link}
                                     aria-label="ВКонтакте"
