@@ -156,15 +156,15 @@ export default function Page() {
             <Komanda
                 title="Руководство студии “Фундук”"
                 workers={[
-                    {
-                        name: "Игорь",
-                        post: "Основатель",
-                        photo: "/komanda/igor.webp",
-                        alt: "Портрет основателя студии “Фундук” — Игорь",
-                        experience: "",
-                        strengths: "",
-                        quote: ""
-                    },
+                    // {
+                    //     name: "Игорь",
+                    //     post: "Основатель",
+                    //     photo: "/komanda/igor.webp",
+                    //     alt: "Портрет основателя студии “Фундук” — Игорь",
+                    //     experience: "",
+                    //     strengths: "",
+                    //     quote: ""
+                    // },
                     {
                         name: "Максим",
                         post: "Исполнительный директор",
