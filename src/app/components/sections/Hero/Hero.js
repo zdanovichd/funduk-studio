@@ -5,7 +5,7 @@ import React from 'react';
 import PhoneForm from "../../ui/PhoneForm/PhoneForm";
 import Link from "next/link";
 
-export default async function Hero({ title = "", content = [], formEnabled = false, breadcrumbs = [] }) {
+export default async function Hero({ title = "", content = "", formEnabled = false, breadcrumbs = [] }) {
 
     return (
         <section className={styles.hero}>
@@ -73,7 +73,7 @@ export default async function Hero({ title = "", content = [], formEnabled = fal
                         </>
                     )}
                     <h1 className={styles.content__title}>{title}</h1>
-                    {content && content.length > 0 && !Array.isArray(content)&&
+                    {content && content.length > 0 &&
                     <div
                         className={styles.content__subtitle}
                         dangerouslySetInnerHTML={{ __html: content }}

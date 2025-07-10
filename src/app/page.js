@@ -27,25 +27,64 @@ export default function Home() {
     <main>
       <Hero
         title="Ремонт квартир под ключ в Санкт-Петербурге"
-        content={"<p>Компания «Фундук» предоставляет полный спектр услуг по дизайн и ремонту квартир «под ключ» в Санкт-Петербурге. Бесплатный расчет стоимости в день обращения. Гарантия безупречного выполнения работ.</p>"}
+        content="<p>Компания «Фундук» предоставляет полный спектр услуг по дизайн и ремонту квартир «под ключ» в Санкт-Петербурге. Бесплатный расчет стоимости в день обращения. Гарантия безупречного выполнения работ.</p>"
         formEnabled={true}
         // breadcrumbs={[
         //   { title: "Главная", path: "/" },
-        //   { title: "Услуги", path: "/services" },
+        //   { title: "Услуги", path: "/services/" },
         //   { title: "Ремонт квартир" }
         // ]}
       />
       <ServicesSlider
         title={"Наши услуги"}
         description={"Мы реализуем работы по внутренней отделке любой сложности, предоставляя полный комплекс услуг от начала до конца. Мы также занимаемся созданием дизайн-проектов интерьеров, гарантируя высокое качество и эксклюзивность."}
+      />
+      <ServicesSlider
+        title={"Ремонт"}
         slides={[
-          { title: "Дизайн под ключ", subtitle: "от 3 500 р/м² за работу", image: "/SE01-1.webp", link: "/dizajn-pod-klyuch" },
-          { title: "Ремонт офисов", subtitle: "от 3 500 р/м² за работу", image: "/SE02-1.webp", link: "/remont-ofisov" },
-          { title: "Ремонт ресторанов", subtitle: "от 3 500 р/м² за работу", image: "/SE01-1.webp", link: "/remont-restoranov" },
-          { title: "Евроремонт", subtitle: "от 3 500 р/м² за работу", image: "/SE01-1.webp", link: "/evroremont" },
-          { title: "Ремонт однокомнатной квартиры", subtitle: "от 3 500 р/м² за работу", image: "/SE02-1.webp", link: "/odnokomnatnaya" },
-          { title: "Ремонт двухкомнатной квартиры", subtitle: "от 3 500 р/м² за работу", image: "/SE01-1.webp", link: "/dvuhkomnatnaya" },
-          { title: "Ремонт трехкомнатной квартиры", subtitle: "от 3 500 р/м² за работу", image: "/SE02-1.webp", link: "/trehkomnatnaya" },
+          { title: "Элитный", subtitle: "от 2 500 р/м² за работу", image: "/services/4c9fb96d65b3a6ee3c7a13c56498276d583a78cd.png", link: "/uslugi/elitnyj-remont-kvartir" },
+          { title: "Евроремонт", subtitle: "", image: "/services/fa8e70d1069555a6323027f35612dfb922240acc.jpg", link: "/uslugi/evroremont" },
+          { title: "Студии", subtitle: "", image: "/services/c0c7932ab2e4ca2a3c71ed9165eb27e4e94cd6f4.jpg", link: "/uslugi/studiya" },
+          { title: "Однокомнатной квартиры", subtitle: "", image: "/services/92f44461ff4af78c4aa3b2ac82ccc862ef59ed6a.jpg", link: "/uslugi/odnokomnatnaya" },
+          { title: "Двухкомнатной квартиры", subtitle: "", image: "/services/e933733f6786d7401cbfddedfeaf498912b9618c.jpg", link: "/uslugi/dvuhkomnatnaya" },
+          { title: "Трехкомнатной квартиры", subtitle: "", image: "/services/4c9fb96d65b3a6ee3c7a13c56498276d583a78cd.png", link: "/uslugi/trehkomnatnaya" },
+          { title: "Четырехкомнатной квартиры", subtitle: "", image: "/services/08054085d93244f62534400bb0b233bebf37f7be.jpg", link: "/uslugi/chetyrehkomnatnaya" },
+          { title: "Дизайнерский", subtitle: "", image: "/services/e933733f6786d7401cbfddedfeaf498912b9618c.jpg", link: "/uslugi/dizaynerskiy" },
+          { title: "Офисов", subtitle: "", image: "/services/d85454678405301c29a60a69ffc2643a713f23fb.jpg", link: "/uslugi/remont-ofisov" },
+          { title: "Кафе и ресторанов", subtitle: "", image: "/services/2ea10b082945aa36a3691c41804571b95cc5b504.jpg", link: "/uslugi/remont-restoranov" },
+          { title: "Гостиниц, отелей, хостелов", subtitle: "", image: "/services/ca6169f03474bdb203cf4d48bf13558f05352d14.jpg", link: "/uslugi/remont-gostinits" },
+          { title: "Фитнес-клубов", subtitle: "", image: "/services/90ab8251b4f4871a7a9430ca5b9f8ff50f67c86c.jpg", link: "/uslugi/remont-fitnes-klubov" },
+          { title: "Магазинов", subtitle: "", image: "/services/ce809c059f814d799a86f71852ad81994c77ab0e.jpg", link: "/uslugi/remont-magazina" },
+          { title: "Салонов красоты", subtitle: "", image: "/services/e08eb3e8300fd67035e64ec9e7620405e0cdd98d.jpg", link: "/uslugi/remont-v-salone-krasoty" },
+          { title: "Стоматологий", subtitle: "", image: "/services/ed3ae17eb135364bdb84985173acdf26df36df5b.jpg", link: "/uslugi/remont-stomatologii" },
+          { title: "Новостроек", subtitle: "", image: "/services/60267619eb2653254490a387e6b34e1fcf16aca3.jpg", link: "/uslugi/remont-kvartir-v-novostrojke" },
+          { title: "Вторичного жилья", subtitle: "", image: "/services/719c6d6bba68f304dec073a96911acfabd24ae8f.jpg", link: "/uslugi/remont-kvartir-na-vtorichke" },
+        ]}
+      />
+      <ServicesSlider
+        title={"Дизайн"}
+        slides={[
+          { title: "Интерьера квартиры", subtitle: "от 2 500 р/м² за работу", image: "/services/9cfa8a961ab093f618d2ffd74bccbb47de6c5969.jpg", link: "/uslugi/dizajn-pod-klyuch" },
+          { title: "Студии", subtitle: "", image: "/services/ce809c059f814d799a86f71852ad81994c77ab0e.jpg", link: "/uslugi/dizajnj-kvartiry-studii" },
+          { title: "Однокомнатной квартиры", subtitle: "", image: "/services/0ec4e546d3719e968a5ed3aca15f4f45c6fa5e4a.jpg", link: "/uslugi/dizayn-odnokomnatnoi-kvartiri" },
+          { title: "Двухкомнатной квартиры", subtitle: "", image: "/services/4bdf2159e20954efb29f9c66e38d27a28967ef91.jpg", link: "/uslugi/dizayn-dvuhkomnatnoi-kvartiri" },
+          { title: "Трехкомнатной квартиры", subtitle: "", image: "/services/5515e5d2324f8f8a4c567e437e43c9855e01f3b6.jpg", link: "/uslugi/dizayn-trehkomnatnoii-kvartiri" },
+          { title: "Четырехкомнатной квартиры", subtitle: "", image: "/services/c2f9ee61a2bef40ea4f8830b7b87ff1ab60fb83c.jpg", link: "/uslugi/dizayn-chetyrehkomnatnoj-kvartiri" },
+          { title: "3D визуализация интерьера", subtitle: "", image: "/services/cbb9e3f9eaa16392fe2f429dfb5279edb0b68f80.jpg", link: "/uslugi/3d-vizualizacziya-interera" },
+          { title: "Офиса", subtitle: "", image: "/services/c713e6c76e09e82ac54cb699fa64b3de79940ad1.jpg", link: "/uslugi/disayn-ofisa" },
+          { title: "Технический дизайн проект", subtitle: "", image: "/services/58640f8be53145d976754ca9a348ef90b02931de.jpg", link: "/uslugi/tehnicheskiy-dizain-proekt" },
+        ]}
+      />
+      <ServicesSlider
+        title={"Дополнительные услуги"}
+        slides={[
+          { title: "Мебелировка", subtitle: "", image: "/services/1d6ca0e715f51d8cdcc015bce6844edb080db1e1.jpg", link: "" },
+          { title: "Узаконивание", subtitle: "", image: "/services/8d680e651309936f50637e1dbd84383eaca5c524.png", link: "" },
+          { title: "Приемка квартир", subtitle: "", image: "/services/c56358c8e952edb336fa0c77d0f9e103704f2184.jpg", link: "" },
+          { title: "Перепланировка", subtitle: "", image: "/services/621f7d9a3803c47963854305fa42ed23986d69e2.jpg", link: "" },
+          { title: "Поставка черновых материалов", subtitle: "", image: "/services/861a9c06c240a8b2aea72a5056b773f5d0b6b84b.jpg", link: "" },
+          { title: "Покупка недвижимости", subtitle: "", image: "/services/141267b9e973226d17db841f33bb19874a29d5a0.png", link: "" },
+          { title: "Шумоизоляция", subtitle: "", image: "/services/618bdbbfe3d94f714065ee996a585cd345ff61d9.jpg", link: "" },
         ]}
       />
       <MultistepForm/>

@@ -21,8 +21,8 @@ export async function POST(request) {
       subject: "Новая заявка с сайта funduk.studio",
       html: `<div>
         <ul>
-          <li>Номер телефона: ${res.value}</li>
-          <li>Согласие на обработку персональных данных: ${res.value ? 'Да' : 'Нет'}</li>
+          <li>Номер телефона: ${res.phone}</li>
+          <li>Согласие на обработку персональных данных: ${res.consentPrivacy ? 'Да' : 'Нет'}</li>
         </ul>
       </div>`
     });
