@@ -94,6 +94,7 @@ export default function MultistepForm() {
         e.preventDefault();
 
         setIsLoading(true);
+        console.log(formData);
         try {
             const data = { formData };
             console.log(data);

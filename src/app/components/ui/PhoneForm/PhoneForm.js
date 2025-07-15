@@ -1,13 +1,15 @@
 'use client'
 import styles from "./phoneform.module.css";
 import React, { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function PhoneForm({ title = [], subtitle = [], button = [] }) {
 
-    const [value, setValue] = useState('');
+    const [phone, setPhone] = useState('');
     const [consentPrivacy, setConsentPrivacy] = useState(false);
     const inputRef = useRef(null);
     const [isLoading, setIsLoading] = useState(false);
+    const url = usePathname()
 
     const formatPhoneNumber = (input) => {
         if (!input) return '+7 (';
@@ -35,19 +37,19 @@ export default function PhoneForm({ title = [], subtitle = [], button = [] }) {
 
     const handleChange = (e) => {
         const formatted = formatPhoneNumber(e.target.value);
-        setValue(formatted);
+        setPhone(formatted);
     };
 
     const handleFocus = () => {
         // При фокусе подставляем "+7 (" если поле пустое
-        if (value.trim() === '') {
-        setValue('+7 (');
+        if (phone.trim() === '') {
+        setPhone('+7 (');
         }
     };
 
     const handleBlur = () => {
-        if (value.trim() === '+7 (') {
-            setValue('');
+        if (phone.trim() === '+7 (') {
+            setPhone('');
         }
     }
 
@@ -56,9 +58,9 @@ export default function PhoneForm({ title = [], subtitle = [], button = [] }) {
     useEffect(() => {
         // Обрабатываем автозаполнение
         const raw = inputRef.current?.value;
-        if (raw && value === '') {
+        if (raw && phone === '') {
         const formatted = formatPhoneNumber(raw);
-        setValue(formatted);
+        setPhone(formatted);
         }
     }, []);
 
@@ -67,7 +69,7 @@ export default function PhoneForm({ title = [], subtitle = [], button = [] }) {
 
         setIsLoading(true);
         try {
-            const data = { value, consentPrivacy };
+            const data = { phone, consentPrivacy, url };
             console.log(data);
             await fetch('../api/callback', {
                 method: 'POST',
@@ -76,7 +78,7 @@ export default function PhoneForm({ title = [], subtitle = [], button = [] }) {
         } catch (error) {
             setError(error.message);
         } finally {
-            setValue('');
+            setPhone('');
             setIsLoading(false);
             setConsentPrivacy(false)
         }
@@ -92,7 +94,7 @@ export default function PhoneForm({ title = [], subtitle = [], button = [] }) {
                     ref={inputRef}
                     id="phone"
                     type="tel"
-                    value={value}
+                    value={phone}
                     onChange={handleChange}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
